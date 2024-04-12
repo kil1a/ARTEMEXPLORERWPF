@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="WpfApp1.UCDrive"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespaace:WpfApp1"
+             mc:Ignorable="d" d:DesignWidth="82" Height="150">
+    <Grid x:Name="grid" Width="82" Height="140" MouseEnter="MouseEnterGridBG" MouseLeave="MouseLeaveGridBG" MouseLeftButtonDown="Open">
+        <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="82" Source="C:\Users\student.TOP\Desktop\Images\Drive.png" RenderTransformOrigin="0.472,0.104"/>
+        <Label x:Name="Name" Content="{Binding LabelDriveName}" HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top" Height="40" Width="82" FontSize="20" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </Grid>
+</UserControl>
