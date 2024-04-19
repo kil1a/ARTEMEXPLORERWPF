@@ -1,0 +1,27 @@
+ 
+Копировать
+using System;
+using System.Net;
+using System.IO;
+
+public void DownloadImage(string imageUrl, string savePath)
+{
+    using (WebClient client = new WebClient())
+    {
+        try
+        {
+            client.DownloadFile(new Uri(imageUrl), savePath);
+            Console.WriteLine("Изображение успешно загружено и сохранено в папке: " + savePath);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Ошибка при загрузке изображения: " + ex.Message);
+        }
+    }
+}
+
+// Пример использования метода
+string imageUrl = "https://example.com/image.jpg";
+string savePath = "C:\\Images\\image.jpg";
+
+DownloadImage(imageUrl, savePath);
